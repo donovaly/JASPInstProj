@@ -11,7 +11,7 @@ Installation of program files, dictionaries and external components
 
 Section -ProgramFiles SecProgramFiles
 
-  # if the $INSTDIR does not contain "FreeCAD" we must add a subfolder to avoid that FreeCAD will e.g.
+  # if the $INSTDIR does not contain "JASP" we must add a subfolder to avoid that JASP will e.g.
   # be installed directly to C:\programs - the uninstaller will then delete the whole
   # C:\programs directory
   StrCpy $String $INSTDIR
@@ -21,7 +21,7 @@ Section -ProgramFiles SecProgramFiles
    StrCpy $INSTDIR "$INSTDIR\${APP_DIR}"
   ${endif}
 
-   # Install and register the core FreeCAD files
+   # Install and register the core JASP files
   
   # Initializes the plug-ins dir ($PLUGINSDIR) if not already initialized.
   # $PLUGINSDIR is automatically deleted when the installer exits.
@@ -30,21 +30,11 @@ Section -ProgramFiles SecProgramFiles
   # Binaries
   SetOutPath "$INSTDIR"
   # recursively copy all files under bin
-  File /r "${FILES_FREECAD}\bin"
-  
-  # MSVC redistributable DLLs
-  SetOutPath "$INSTDIR\bin"
-  File "${FILES_DEPS}\*.*"
+  File /r "${FILES_JASP}\bin"
   
   # Others
   SetOutPath "$INSTDIR"
-  File /r "${FILES_FREECAD}\data"
-  File /r "${FILES_FREECAD}\doc"
-  File /r "${FILES_FREECAD}\Ext"
-  File /r "${FILES_FREECAD}\lib"
-  File /r "${FILES_FREECAD}\Mod"
-  File /r "${FILES_FREECAD}\resources"
-  File /r "${FILES_THUMBS}"
+  File /r "${FILES_JASP}"
     
   # Create uninstaller
   WriteUninstaller "$INSTDIR\${SETUP_UNINSTALLER}"

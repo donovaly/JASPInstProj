@@ -2,7 +2,7 @@
 
 configure.nsh
 
-Write registry information and configure FreeCAD
+Write registry information and configure JASP
 
 */
 
@@ -45,9 +45,9 @@ Section -InstallData
   WriteRegStr SHCTX ${APP_UNINST_KEY} "DisplayVersion" "${APP_VERSION}"
   WriteRegStr SHCTX ${APP_UNINST_KEY} "DisplayIcon" "$INSTDIR\bin\${APP_NAME}.exe"
   WriteRegStr SHCTX ${APP_UNINST_KEY} "URLUpdateInfo" "${APP_WEBPAGE}"
-  WriteRegStr SHCTX ${APP_UNINST_KEY} "URLInfoAbout" "https://www.freecadweb.org/"
+  WriteRegStr SHCTX ${APP_UNINST_KEY} "URLInfoAbout" "https://jasp-stats.org/"
   WriteRegStr SHCTX ${APP_UNINST_KEY} "Publisher" "${APP_NAME} Team"
-  WriteRegStr SHCTX ${APP_UNINST_KEY} "HelpLink" "https://forum.freecadweb.org/"
+  WriteRegStr SHCTX ${APP_UNINST_KEY} "HelpLink" "http://forum.cogsci.nl/index.php?p=/categories/jasp-bayesfactor"
   WriteRegDWORD SHCTX ${APP_UNINST_KEY} "NoModify" 0x00000001
   WriteRegDWORD SHCTX ${APP_UNINST_KEY} "NoRepair" 0x00000001
   WriteRegStr SHCTX ${APP_UNINST_KEY} "StartMenu" "$SMPROGRAMS\$StartmenuFolder"
@@ -67,33 +67,26 @@ Section -InstallData
 SectionEnd
 
 #--------------------------------
-# Write FreeCAD file associations
+# Write JASP file associations
 
 Section -Configure
 
-  # Associate .FCStd files with FreeCAD for current user or all users
+  # Associate .jasp files with JASP for current user or all users
 
   ${if} $CreateFileAssociations == "true"
    WriteRegStr SHCTX "${APP_DIR_REGKEY}" "" "$INSTDIR\${APP_RUN}"
    WriteRegStr SHCTX "Software\Classes\${APP_REGNAME_DOC}" "" "${APP_NAME} Document"
    WriteRegStr SHCTX "Software\Classes\${APP_REGNAME_DOC}\DefaultIcon" "" "$INSTDIR\${APP_RUN},0"
    WriteRegStr SHCTX "Software\Classes\${APP_REGNAME_DOC}\Shell\open\command" "" '"$INSTDIR\${APP_RUN}" "%1"'
-   # we need to update also the automatically created entry about the FreeCAD.exe
-   # otherwise .FCStd-files will could be opened with an older FreeCAD version
-   ReadRegStr $0 SHCTX "Software\Classes\Applications\${BIN_FREECAD}\shell\open\command" ""
+   # we need to update also the automatically created entry about the JASP.exe
+   # otherwise .jasp-files will could be opened with an older JASP version
+   ReadRegStr $0 SHCTX "Software\Classes\Applications\${BIN_JASP}\shell\open\command" ""
    ${if} $0 != "" # if something was found
-    WriteRegStr SHCTX "Software\Classes\Applications\${BIN_FREECAD}\shell\open\command" "" '"$INSTDIR\${APP_RUN}" "%1"'
+    WriteRegStr SHCTX "Software\Classes\Applications\${BIN_JASP}\shell\open\command" "" '"$INSTDIR\${APP_RUN}" "%1"'
    ${endif}
    # .FCStd
    WriteRegStr SHCTX "Software\Classes\${APP_EXT}" "" "${APP_REGNAME_DOC}"
    WriteRegStr SHCTX "Software\Classes\${APP_EXT}" "Content Type" "${APP_MIME_TYPE}"
-   # if the user is admin, also install the DLL toe preview .FCStd files
-   ${if} $MultiUser.Privileges == "Admin"
-    # see https://nsis.sourceforge.io/Docs/AppendixB.html#library_install for a description of InstallLib
-    !insertmacro InstallLib REGDLL NOTSHARED NOREBOOT_NOTPROTECTED ${FILES_THUMBS}\FCStdThumbnail.dll $SYSDIR\FCStdThumbnail.dll $SYSDIR
-   ${endif}
-   # in any case remove the FCStdThumbnail.dll
-   RMDir /r "$INSTDIR\thumbnail"
    
    # Eventually refresh shell icons
    ${RefreshShellIcons}
@@ -104,7 +97,7 @@ SectionEnd
 #--------------------------------
 #
 
-Function StartFreeCAD
+Function StartJASP
 
   Exec "$INSTDIR\${APP_RUN}"
 

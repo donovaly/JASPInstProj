@@ -10,7 +10,7 @@ Var FileAssociation
 
 # ----------------------------------
 
-Section "un.FreeCAD" un.SecUnProgramFiles
+Section "un.JASP" un.SecUnProgramFiles
 
   SectionIn RO
     
@@ -43,7 +43,7 @@ Section "un.FreeCAD" un.SecUnProgramFiles
   DeleteRegKey SHCTX "${APP_REGKEY_SETUP}"
   DeleteRegKey SHCTX "${APP_REGKEY}"
   DeleteRegKey SHCTX "${APP_UNINST_KEY}"
-  DeleteRegKey HKCR "Applications\${BIN_FREECAD}"
+  DeleteRegKey HKCR "Applications\${BIN_JASP}"
   DeleteRegValue HKCR "${APP_NAME}.Document\Shell\open\command" ""
   DeleteRegValue HKCR "${APP_NAME}.Document\DefaultIcon" ""
   
@@ -65,12 +65,12 @@ SectionEnd
 
 #---------------------------------
 # user preferences
-Section /o "un.$(UnFreeCADPreferencesTitle)" un.SecUnPreferences
+Section /o "un.$(UnJASPPreferencesTitle)" un.SecUnPreferences
 
  # issue a warning dialog
  MessageBox MB_YESNO|MB_DEFBUTTON2|MB_ICONEXCLAMATION $(DialogUnPreferences) /SD IDYES IDYES +2 # continue if yes
   Goto NotPreferences
- # remove FreeCAD's config files
+ # remove JASP's config files
  StrCpy $AppSubfolder ${APP_DIR_USERDATA}
  Call un.DelAppPathSub # function from Utils.nsh
  NotPreferences:

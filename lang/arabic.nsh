@@ -1,5 +1,5 @@
 ﻿/*
-FreeCAD Installer Language File
+JASP Installer Language File
 Language: Arabic
 */
 
@@ -14,7 +14,7 @@ ${LangFileString} TEXT_WELCOME "هذا المساعد سوف يرشدك خلال
 #${LangFileString} TEXT_CONFIGURE_PYTHON "بناء سكربتات بايثون..."
 
 ${LangFileString} TEXT_FINISH_DESKTOP "إنشاء اختصار سطح المكتب"
-${LangFileString} TEXT_FINISH_WEBSITE "زيارة freecadweb.org لمشاهدة آخر الاخبار, الدعم والأفكار"
+${LangFileString} TEXT_FINISH_WEBSITE "زيارة jasp-stats.org لمشاهدة آخر الاخبار, الدعم والأفكار"
 
 #${LangFileString} FileTypeTitle "مستند - ليك"
 
@@ -24,7 +24,7 @@ ${LangFileString} SecDesktopTitle "رمز سطح المكتب"
 
 ${LangFileString} SecCoreDescription "ملفات ليك."
 #${LangFileString} SecAllUsersDescription "تركيب ليك لهذا المستخدم أم لجميع المستخدمين."
-${LangFileString} SecFileAssocDescription "الملفات بلاحقة .FCStd سوف تفتح تلفائيا ببرنامج ليك."
+${LangFileString} SecFileAssocDescription "الملفات بلاحقة .jasp سوف تفتح تلفائيا ببرنامج ليك."
 ${LangFileString} SecDesktopDescription "رمز ليم على سطح المكتب."
 #${LangFileString} SecDictionaries "قواميس"
 #${LangFileString} SecDictionariesDescription "قواميس المدقق الإملائي التي يمكن تنزيلها وتركيبها."
@@ -56,15 +56,15 @@ ${LangFileString} UnNotInRegistryLabel "لم يتم العثور على ليك �
 ${LangFileString} UnInstallRunning "يجب إغلاق ليك أولا!"
 ${LangFileString} UnNotAdminLabel "يجب أن يكون لديك صلاحيات المدير لكي تحذف ليك!"
 ${LangFileString} UnReallyRemoveLabel "هل ترغب بإزالة ليك مع كل مكوناته؟"
-${LangFileString} UnFreeCADPreferencesTitle 'تفضيلات مستخدم ليك'
+${LangFileString} UnJASPPreferencesTitle 'تفضيلات مستخدم ليك'
 
 #${LangFileString} SecUnProgDescription "إزالة مدير ثبت المراجع xxx."
-${LangFileString} SecUnPreferencesDescription 'حذف FreeCAD$\'s ضبط$\r$\n\
+${LangFileString} SecUnPreferencesDescription 'حذف JASP$\'s ضبط$\r$\n\
 						(مجلد $\"$AppPre\username\$\r$\n\
 						$AppSuff\$\r$\n\
 						${APP_DIR_USERDATA}$\")$\r$\n\
 						لك او لكل المستخدمين (إذا كنت المدير).'
-${LangFileString} DialogUnPreferences 'You chose to delete the FreeCADs user configuration.$\r$\n\
-						This will also delete all installed FreeCAD addons.$\r$\n\
+${LangFileString} DialogUnPreferences 'You chose to delete the JASP user configuration.$\r$\n\
+						This will also delete all installed JASP addons.$\r$\n\
 						Do you agree with this?'
 ${LangFileString} SecUnProgramFilesDescription "إزالة ليك مع كل مكوناته."
