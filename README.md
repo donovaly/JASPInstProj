@@ -2,7 +2,7 @@
 A Windows installer for JASP
 
 To build the installer you can do the following:
-1. Get the latest zip-file of the whole installer source code "FC-standard-installer.zip"
+1. Get the latest zip-file of the whole installer source code "JASP-standard-installer.zip"
    from https://github.com/donovaly/JASPInstProj/releases
 2. Extract it to e.g. the path "C:\JASP\Installer"
 3. Open the file Settings.nsh with a text editor
