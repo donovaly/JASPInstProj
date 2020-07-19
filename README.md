@@ -18,12 +18,9 @@ To build the installer you can do the following:
    Copy the file ~\nsprocess\Plugins\x86-unicode\nsProcess.dll to the folder</br>
    \Plugins\x86-unicode of NSIS's installation folder.
    (You can alternatively get nsProcess from https://nsis.sourceforge.io/NsProcess_plugin)
-7. Copy the file ~\FindProc\FindProcDLL.dll to the folder</br>
-   \Plugins\x86-unicode of NSIS's installation folder.
-   (You can alternatively get nsProcess from https://nsis.sourceforge.io/FindProcDLL_plug-in)
-8. Copy all JASP files to the folder "~\JASP"
+7. Copy all JASP files to the folder "~\JASP"
    e.g. "C:\JASP\Installer\JASP"
-9. Right-click on the file JASP-installer.nsi and choose "Compile NSIS script"
+8. Right-click on the file JASP-installer.nsi and choose "Compile NSIS script"
    to compile the installer.
 
 For test builds of the installer you can turn off the compression. This speeds up
