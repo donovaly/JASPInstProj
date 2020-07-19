@@ -44,4 +44,3 @@ SetCompressor /SOLID lzma
 # !!! you need to adjust them to the folders in your Windows system !!!
 
 !define FILES_JASP "D:\usti\JASP\Installer\JASP"
-!define FILES_DEPS "D:\usti\JASP\Installer\MSVCRedist"
