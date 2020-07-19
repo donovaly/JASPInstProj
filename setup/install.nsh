@@ -29,11 +29,7 @@ Section -ProgramFiles SecProgramFiles
   
   # Binaries
   SetOutPath "$INSTDIR"
-  # recursively copy all files under bin
-  File /r "${FILES_JASP}\bin"
-  
-  # Others
-  SetOutPath "$INSTDIR"
+  # recursively copy all files
   File /r "${FILES_JASP}"
     
   # Create uninstaller

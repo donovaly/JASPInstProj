@@ -18,19 +18,19 @@ Section -InstallData
   WriteRegStr SHCTX ${APP_REGKEY} "Version" "${APP_VERSION_NUMBER}"
   
   # Start Menu shortcut
-  SetOutPath "$INSTDIR\bin" # this is the folder in which the shortcut is executed
+  SetOutPath "$INSTDIR\JASP" # this is the folder in which the shortcut is executed
   # we must assure that the folder is not empty (happens on silent install and can accidentally happen)
   ${if} $StartmenuFolder == ""
    StrCpy $StartmenuFolder "${APP_DIR}"
   ${endif}
   CreateDirectory "$SMPROGRAMS\$StartmenuFolder"
-  CreateShortCut "$SMPROGRAMS\$StartmenuFolder\${APP_NAME}.lnk" "$INSTDIR\${APP_RUN}" "" "$INSTDIR\${APP_RUN}" "" "" "" "${APP_INFO}"
-  # Link to website and Wiki
+  CreateShortCut "$SMPROGRAMS\$StartmenuFolder\${APP_NAME} ${APP_SERIES_NAME}.lnk" "$INSTDIR\${APP_RUN}" "" "$INSTDIR\${APP_RUN}" "" "" "" "${APP_INFO}"
+  # Link to website and documentation
   WriteINIStr "$SMPROGRAMS\$StartmenuFolder\${APP_WEBPAGE_INFO}.url" "InternetShortcut" "URL" "${APP_WEBPAGE}"
-  WriteINIStr "$SMPROGRAMS\$StartmenuFolder\${APP_WIKI_INFO}.url" "InternetShortcut" "URL" "${APP_WIKI}"
+  WriteINIStr "$SMPROGRAMS\$StartmenuFolder\${APP_DOCS_INFO}.url" "InternetShortcut" "URL" "${APP_DOCS}"
   # create desktop icon
   ${if} $CreateDesktopIcon == "true"
-   SetOutPath "$INSTDIR\bin"
+   SetOutPath "$INSTDIR\JASP"
    CreateShortCut "$DESKTOP\${APP_NAME} ${APP_SERIES_NAME}.lnk" "$INSTDIR\${APP_RUN}" "" "$INSTDIR\${APP_RUN}" "" "" "" "${APP_INFO}"
   ${endif}
   
@@ -43,7 +43,7 @@ Section -InstallData
   
   WriteRegStr SHCTX ${APP_UNINST_KEY} "UninstallString" '"$INSTDIR\${SETUP_UNINSTALLER}"'
   WriteRegStr SHCTX ${APP_UNINST_KEY} "DisplayVersion" "${APP_VERSION}"
-  WriteRegStr SHCTX ${APP_UNINST_KEY} "DisplayIcon" "$INSTDIR\bin\${APP_NAME}.exe"
+  WriteRegStr SHCTX ${APP_UNINST_KEY} "DisplayIcon" "$INSTDIR\${APP_RUN}"
   WriteRegStr SHCTX ${APP_UNINST_KEY} "URLUpdateInfo" "${APP_WEBPAGE}"
   WriteRegStr SHCTX ${APP_UNINST_KEY} "URLInfoAbout" "https://jasp-stats.org/"
   WriteRegStr SHCTX ${APP_UNINST_KEY} "Publisher" "${APP_NAME} Team"
@@ -84,7 +84,7 @@ Section -Configure
    ${if} $0 != "" # if something was found
     WriteRegStr SHCTX "Software\Classes\Applications\${BIN_JASP}\shell\open\command" "" '"$INSTDIR\${APP_RUN}" "%1"'
    ${endif}
-   # .FCStd
+   # .jasp
    WriteRegStr SHCTX "Software\Classes\${APP_EXT}" "" "${APP_REGNAME_DOC}"
    WriteRegStr SHCTX "Software\Classes\${APP_EXT}" "Content Type" "${APP_MIME_TYPE}"
    

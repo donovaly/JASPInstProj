@@ -30,9 +30,9 @@ Configuration and variables of JASP installer
 !define APP_WEBPAGE_INFO "${APP_NAME} Website"
 !define APP_DOCS "https://jasp-stats.org/how-to-use-jasp/"
 !define APP_DOCS_INFO "${APP_NAME} Documentation"
-!define APP_COPYRIGHT "${APP_NAME} is Copyright © 2001-${COPYRIGHT_YEAR} by the ${APP_NAME} Team"
+!define APP_COPYRIGHT "${APP_NAME} is Copyright © 2013-${COPYRIGHT_YEAR} by the ${APP_NAME} Team"
 
-!define APP_RUN "bin\${APP_NAME}.exe"
+!define APP_RUN "JASP\${APP_NAME}.exe"
 !define BIN_JASP "${APP_NAME}.exe"
 
 !define APP_REGKEY "Software\${APP_NAME}${APP_SERIES_KEY}" # like "JASP0131"
