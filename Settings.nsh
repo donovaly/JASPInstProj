@@ -18,7 +18,7 @@ SetCompressor /SOLID lzma
 !define APP_VERSION_MAJOR 0
 !define APP_VERSION_MINOR 13
 !define APP_VERSION_REVISION 1
-!define APP_VERSION_EMERGENCY "test" # use "1" for an emergency release of JASP otherwise ""
+!define APP_VERSION_EMERGENCY "" # use "1" for an emergency release of JASP otherwise ""
 	# alternatively you can use APP_VERSION_EMERGENCY for a custom suffix of the version number
 !define APP_EMERGENCY_DOT "" # use "." for an emergency release of JASP otherwise ""
 !define APP_VERSION_BUILD 1 # Start with 1 for the installer releases of each version
