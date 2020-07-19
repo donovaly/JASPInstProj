@@ -1,5 +1,5 @@
 ﻿/*
-FreeCAD Installer Language File
+JASP Installer Language File
 Language: Basque
 */
 
@@ -14,18 +14,18 @@ ${LangFileString} TEXT_WELCOME "Morroi honek $(^NameDA) aplikazioaren instalazio
 #${LangFileString} TEXT_CONFIGURE_PYTHON "Python script-ak konpilatzen..."
 
 ${LangFileString} TEXT_FINISH_DESKTOP "Sortu mahaigaineko lasterbidea"
-${LangFileString} TEXT_FINISH_WEBSITE "Bisitatu freecadweb.org azken berriak, aholkuak eta laguntza lortzeko"
+${LangFileString} TEXT_FINISH_WEBSITE "Bisitatu https://jasp-stats.org azken berriak, aholkuak eta laguntza lortzeko"
 
-#${LangFileString} FileTypeTitle "FreeCAD-dokumentua"
+#${LangFileString} FileTypeTitle "JASP-dokumentua"
 
 #${LangFileString} SecAllUsersTitle "Instalatu erabiltzaile guztientzako?"
 ${LangFileString} SecFileAssocTitle "Fitxategiaren esleipenak"
 ${LangFileString} SecDesktopTitle "Mahaigaineko ikonoa"
 
-${LangFileString} SecCoreDescription "FreeCAD fitxategiak."
-#${LangFileString} SecAllUsersDescription "Instalatu FreeCAD erabiltzaile guztientzako, edo soilik uneko erabiltzailearentzako."
-${LangFileString} SecFileAssocDescription ".FCStd luzapeneko fitxategiak FreeCAD-ekin irekiko dira automatikoki."
-${LangFileString} SecDesktopDescription "FreeCAD ikonoa mahaigainean."
+${LangFileString} SecCoreDescription "JASP fitxategiak."
+#${LangFileString} SecAllUsersDescription "Instalatu JASP erabiltzaile guztientzako, edo soilik uneko erabiltzailearentzako."
+${LangFileString} SecFileAssocDescription ".jasp luzapeneko fitxategiak JASP-ekin irekiko dira automatikoki."
+${LangFileString} SecDesktopDescription "JASP ikonoa mahaigainean."
 #${LangFileString} SecDictionaries "Hiztegia"
 #${LangFileString} SecDictionariesDescription "Zuzentzaile ortografikoen hiztegiak deskarga eta instala daitezke."
 
@@ -34,37 +34,37 @@ ${LangFileString} SecDesktopDescription "FreeCAD ikonoa mahaigainean."
 
 #${LangFileString} DictionariesFailed 'Huts egin du  $\"$R3$\" hizkuntzaren hiztegia deskargatzean.'
 
-#${LangFileString} ConfigInfo "FreeCAD-en hurrengo konfigurazioak denbora piskat beharko du."
+#${LangFileString} ConfigInfo "JASP-en hurrengo konfigurazioak denbora piskat beharko du."
 
 #${LangFileString} RunConfigureFailed "Ezin izan da konfigurazioaren script-a exekutatu"
 ${LangFileString} InstallRunning "Instalatzailea jadanik exekutatzen ari da."
-${LangFileString} AlreadyInstalled "FreeCAD ${APP_SERIES_KEY2} jadanik instalatuta dago!$\r$\n\
+${LangFileString} AlreadyInstalled "JASP ${APP_SERIES_KEY2} jadanik instalatuta dago!$\r$\n\
 				Installing over existing installations is not recommended if the installed version$\r$\n\
-				is a test release or if you have problems with your existing FreeCAD installation.$\r$\n\
-				In these cases better reinstall FreeCAD.$\r$\n\
-				Dou you nevertheles want to install FreeCAD over the existing version?"
-${LangFileString} NewerInstalled "Instalatuta dagoen FreeCAD baino bertsio zaharragoa instalatzen saiatzen ari zara.$\r$\n\
-				  Hori egitea nahi baduzu, lehenbizi existitzen den FreeCAD $OldVersionNumber desinstalatu beharko duzu."
+				is a test release or if you have problems with your existing JASP installation.$\r$\n\
+				In these cases better reinstall JASP.$\r$\n\
+				Dou you nevertheles want to install JASP over the existing version?"
+${LangFileString} NewerInstalled "Instalatuta dagoen JASP baino bertsio zaharragoa instalatzen saiatzen ari zara.$\r$\n\
+				  Hori egitea nahi baduzu, lehenbizi existitzen den JASP $OldVersionNumber desinstalatu beharko duzu."
 
-#${LangFileString} FinishPageMessage "Zorionak! FreeCAD ongi instalatu da.$\r$\n\
+#${LangFileString} FinishPageMessage "Zorionak! JASP ongi instalatu da.$\r$\n\
 #					$\r$\n\
-#					(FreeCAD aurreneko aldiz abiatzean denbora piskat beharko du.)"
-${LangFileString} FinishPageRun "Abiarazi FreeCAD"
+#					(JASP aurreneko aldiz abiatzean denbora piskat beharko du.)"
+${LangFileString} FinishPageRun "Abiarazi JASP"
 
-${LangFileString} UnNotInRegistryLabel "Ezin da FreeCAD aurkitu erregistroan.$\r$\n\
+${LangFileString} UnNotInRegistryLabel "Ezin da JASP aurkitu erregistroan.$\r$\n\
 					Mahaigaineko eta Hasiera menuko lasterbideak ez dira kenduko."
-${LangFileString} UnInstallRunning "Aurrenik FreeCAD itxi behar duzu."
-${LangFileString} UnNotAdminLabel "Administratzailearen baimenak behar dituzu FreeCAD desinstalatzeko."
-${LangFileString} UnReallyRemoveLabel "Ziur zaude FreeCAD eta bere osagai guztiak kentzea nahi dituzula??"
-${LangFileString} UnFreeCADPreferencesTitle 'FreeCAD-eko erabiltzailearen hobespenak'
+${LangFileString} UnInstallRunning "Aurrenik JASP itxi behar duzu."
+${LangFileString} UnNotAdminLabel "Administratzailearen baimenak behar dituzu JASP desinstalatzeko."
+${LangFileString} UnReallyRemoveLabel "Ziur zaude JASP eta bere osagai guztiak kentzea nahi dituzula??"
+${LangFileString} UnJASPPreferencesTitle 'JASP-eko erabiltzailearen hobespenak'
 
 #${LangFileString} SecUnProgDescription "xxx kudeatzailea desinstalatzen du."
-${LangFileString} SecUnPreferencesDescription 'FreeCAD-en konfigurazioa ezabatzen du$\r$\n\
+${LangFileString} SecUnPreferencesDescription 'JASP-en konfigurazioa ezabatzen du$\r$\n\
 						($\"$AppPre\erabiltzailea\$\r$\n\
 						$AppSuff\$\r$\n\
 						\${APP_DIR_USERDATA}$\"$\r$\n\
 						zuretzako edo erabiltzaile guztientzako (administratzailea bazara).'
-${LangFileString} DialogUnPreferences 'You chose to delete the FreeCADs user configuration.$\r$\n\
-						This will also delete all installed FreeCAD addons.$\r$\n\
+${LangFileString} DialogUnPreferences 'You chose to delete the JASPs user configuration.$\r$\n\
+						This will also delete all installed JASP addons.$\r$\n\
 						Do you agree with this?'
-${LangFileString} SecUnProgramFilesDescription "Desinstalatu FreeCAD eta bere osagai guztiak."
+${LangFileString} SecUnProgramFilesDescription "Desinstalatu JASP eta bere osagai guztiak."

@@ -14,7 +14,7 @@ ${LangFileString} TEXT_WELCOME "هذا المساعد سوف يرشدك خلال
 #${LangFileString} TEXT_CONFIGURE_PYTHON "بناء سكربتات بايثون..."
 
 ${LangFileString} TEXT_FINISH_DESKTOP "إنشاء اختصار سطح المكتب"
-${LangFileString} TEXT_FINISH_WEBSITE "زيارة jasp-stats.org لمشاهدة آخر الاخبار, الدعم والأفكار"
+${LangFileString} TEXT_FINISH_WEBSITE "زيارة https://jasp-stats.org لمشاهدة آخر الاخبار, الدعم والأفكار"
 
 #${LangFileString} FileTypeTitle "مستند - ليك"
 
